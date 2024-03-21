@@ -1,0 +1,224 @@
+@keyframes pop-up {
+  from { top: -1em; } to { top: 1.4em; }
+}
+
+*{
+  margin          : 0;
+  padding         : 0;
+  text-decoration : none;
+  border          : none;
+  box-sizing      : border-box;
+  font-size       : 16px;
+}
+
+:root{
+  --azul          : #be2828;
+  --azulclaro     : #d5e8ef;
+  --verde         : #6ebac7;
+  --vermelho      : #ff7373;
+  --sombra        : #00000083;
+  --branco        : #eee;
+}
+
+html, body{
+  background-color: var(--azul);
+  font-family     : 'Gill Sans', 'Gill Sans MT', sans-serif;
+  height          : 100vh;
+}
+
+body, main, form{
+  display         : flex;
+  flex-direction  : column;
+  justify-content : center;
+}
+
+body{
+  align-items     : center;
+}
+
+main{
+  background-color: var(--branco);
+  align-items     : center;
+  width           : 100%;
+  max-width       : 500px;
+  min-width       : 320px;
+  height          : 100vh;
+  position        : relative;
+  justify-content : flex-start;
+  padding-top     : 1em;
+  box-shadow      : 0 0 5px var(--sombra);
+}
+
+.msg{
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  position        : absolute;
+  top             : 1.4em;
+  width           : 90%;
+  height          : 3em;
+  border-radius   : .4em;
+  animation       : pop-up .2s ease-out;
+}
+
+.success{
+  background-color: var(--verde);
+  color           : var(--branco);
+}
+
+.disable{
+  display         : none;
+}
+
+h1{
+  font-size       : 2em;
+  color           :  #2f5ee0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  
+}
+
+span{
+  font-size       : 1em;
+  color           : var(--azul);
+  border-bottom   : var(--verde) solid 5px;
+}
+
+form{
+  width           : 90%;
+  padding-top     : 1em;
+}
+
+label{
+  margin-top      : 1em; 
+}
+
+label > span{
+  border          : none;
+}
+
+input{
+  border-bottom   : var(--azul) solid 2px;
+  padding         : .4em 0;
+  outline         : none;
+  background-image: url("/Calculadora-de-IMC-main/img/show/fundoenf2.jpg");
+}
+
+input:focus{
+  border-bottom   : var(--verde) solid 2px;
+}
+
+button{
+  background-color: var(--azul);
+  color           : var(--branco);
+  margin          : 1em auto;
+  padding         : .5em;
+  width           : 50%;
+  border-radius   : .5em;
+  outline-color   : var(--azul);
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  
+}
+
+#table, table{
+  background-color: var(--branco);
+  font-family     : Arial, Helvetica, sans-serif;
+  width           : 100%;
+  text-align      : center;
+}
+
+th{
+  background-color: var(--azul);
+  color           : var(--branco);
+  padding         : .3em;
+}
+
+#thName, #c{
+  width           : 40%;
+}
+
+td{
+  padding         : .3em;
+  background-color: var(--azulclaro);
+}
+
+.clearAll, .clear{
+  cursor          : pointer;
+  padding         : 0 .6em;
+}
+
+.clearAll{
+  background-color: var(--vermelho);
+}
+
+.clear{
+  font-weight     : bold;
+  background-color: var(--branco);
+  border          : var(--vermelho) solid 1px;
+  color           : var(--vermelho);
+}
+
+.full-modal{
+  position        : absolute;
+  background-color: #000000;
+  opacity         : .75;
+  height          : 100vh;
+  width           : 100%;
+}
+
+.modal{
+  background-color: #77e4ff;
+  position        : absolute;
+  width           : 80%;
+  padding         : .3em;
+  box-shadow      : 0 0 3px var(--sombra);
+}
+
+.ask{
+  background-color: rgba(0, 78, 194, 0.952);
+  font-size       : 1.2em;
+  padding         : .5em;
+  color           : var(--branco);
+  box-shadow      : 0 0 3px var(--sombra);
+}
+
+.text{
+  font-size       : 1.1em;
+  padding         : 1em .25em;
+  text-align      : center;
+  font-weight     : 600;
+  color           : #00245a;
+}
+
+.buttons{
+  display         : flex;
+  justify-content : space-between;
+}
+
+.buttons button{
+  width           : 40%;
+  margin          : 0.2em 0;
+  border-radius   : 0;
+}
+
+.yes{
+  background-color: var(--verde);
+  color           : var(--branco);
+}
+
+.no{
+  background-color: var(--vermelho);
+  color           : var(--branco);
+}
+
+@media screen and (width > 568px) {
+  .modal{
+    width         : 400px;
+  }
+}
+@media screen and (width < 400px) {
+  .modal{
+    width         : 95%;
+  }
+}

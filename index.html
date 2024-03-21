@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMC-ENFERMAGEM</title>
+  <link rel="stylesheet" href="css/style.css"> 
+  <script type="module" src="js/main.js" defer></script>
+  <link rel="shortcut icon" href="img/show/imgZapGrupos_0405180927170.jpg" type="image/x-icon"> 
+</head>
+<body>
+  <main>
+    <h1><span>C</span>alculadora IM<span>C</span></h1>
+    <p class="msg disable"></p>
+    <form action="">
+      <label for="name"> Nome <span>*</span></label>
+      <input
+        type         = "text"
+        name         = "name"
+        id           = "name"
+        placeholder  = "Nome"
+        autofocus
+        required
+      >
+      <label for="age">Idade <span>*</span></label>
+      <input
+        type         = "number"
+        name         = "age"
+        id           = "age"
+        min          = "1"
+        max          = "130"
+        step         = "1"
+        placeholder  = "Idade"
+        required
+      >
+      <label for="weight">Peso <span>*</span></label>
+      <input
+        type         = "number"
+        name         = "weight"
+        id           = "weight"
+        min          = "1.0"
+        max          = "400"
+        step         = "0.1"
+        placeholder  = "Kg"
+        required
+        >
+      <label for="height">Altura <span>*</span></label>
+      <input
+        type         = "number"
+        name         = "height"
+        id           = "height"
+        min          = "0.30"
+        max          = "3.00"
+        step         = "0.01"
+        placeholder  = "m"
+        required
+        >
+      <button type="submit">Calcular</button>
+    </form>
+    <table>
+      <!--Person list-->
+    </table>
+  </main>
+</body>
+</html>
